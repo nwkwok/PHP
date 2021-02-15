@@ -20,6 +20,10 @@ class ExampleTest extends TestCase
     }
 }
 
+
+# Unit tests usually test the behavior of a function or class
+
+
 # To write a test in PHP-Unit
     # Create a class that extends TestCase
     # Add public methods that start with test
