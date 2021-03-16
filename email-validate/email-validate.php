@@ -3,7 +3,11 @@
 
 // prepend htmlspecialchars
 // filter_has_var($variable, flag type) 
-
+// Difference between filter_has_var and isset
+// filter_has_var will look at the current request that's being made
+// So in this example, if you have filter_has_var(INPUT_POST, 'submit'), it will look through all of the input values
+// for the request that is submitted
+// isset will look through the entire $_POST array. 
 
 if (filter_has_var(INPUT_POST, 'submit')) {
     $name = $_POST['name'];
