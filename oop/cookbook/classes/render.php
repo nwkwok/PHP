@@ -14,6 +14,8 @@ class Render
         ksort($ingredient_list);
         return implode("\n", array_keys($ingredient_list));
     }
+
+
     public static function listIngredients($ingredients)
     {
         $output = "";
@@ -44,7 +46,14 @@ class Render
     public static function listRecipes($titles)
     {
         asort($titles);
+        $output = "";
         return implode("\n", $titles);
+        foreach ($titles as $key => $title) {
+            if ($output != "") {
+                $output .= "\n";
+            }
+            $output .= "[$key] $title";
+        }
     }
 }
 
