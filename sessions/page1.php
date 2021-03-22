@@ -1,4 +1,9 @@
 <?php
+
+// difference between htmlentities and htmlspecialchars
+// htmlspecialchars will encode '<>&' wherewas htmlentities will encode all symbols and special characters.
+
+
 if (isset($_POST['submit'])) {
     session_start(); // Starts the session
 

@@ -1,6 +1,4 @@
 <?php
-
-
 // prepend htmlspecialchars
 // filter_has_var($variable, flag type) 
 // Difference between filter_has_var and isset
@@ -10,10 +8,10 @@
 // isset will look through the entire $_POST array. 
 
 if (filter_has_var(INPUT_POST, 'submit')) {
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $subject = $_POST['subject'];
-    $message = $_POST['message'];
+    $name = htmlspecialchars($_POST['name']);
+    $email = htmlspecialchars($_POST['email']);
+    $subject = htmlspecialchars($_POST['subject']);
+    $message = htmlspecialchars($_POST['message']);
 
     if (empty($name) || empty($email) || empty($subject) || empty($message)) {
         $msg = "Please fill out all of the information";
