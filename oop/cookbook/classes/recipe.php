@@ -36,9 +36,45 @@ class Recipe
         "gallon"
     );
 
+    public function __construct($title = null)
+    {
+        $this->setTitle($title);
+    }
+
+    /* toString magic method:
+    If you were to call an object that is instantiated form a class by itself,
+    it would throw an error:
+        $object = new Object();
+        echo $object
+            - throws error
+
+        However, if you added a __toString() it will run the magic method __toString() when
+        the object gets called and will return what is in that method.
+
+    */
+
+    public function __toString()
+    {
+        $output = "You are calling a " . __CLASS__ . " object with the title \"";
+        $output .= $this->getTitle() . "\"";
+        $output .= "\nIt is stored in " . basename(__FILE__) . " at " . __DIR__ . ".";
+        $output .= "\nThis display is from line " . __LINE__ . " in method " . __METHOD__;
+        $output .= "\nThe following methods are available for objects of this class: \n";
+        $output .= implode("\n", get_class_methods(__CLASS__));
+        return $output;
+
+        // Other magic constants
+        // __DIR__ 
+        // __FILE__
+    }
+
     public function setTitle($title)
     {
-        $this->title = ucwords($title);
+        if (empty($title)) {
+            $this->title = null;
+        } else {
+            $this->title = ucwords($title);
+        }
     }
 
     public function getTitle()
