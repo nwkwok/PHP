@@ -1,6 +1,7 @@
 <?php
 include "classes/recipes.php";
 include "classes/render.php";
+include "inc/recipes.php";
 /* Notes:
     When you use the -> to access properties / methods in a class
     The preceding var declaration and the proceding object/method becomes on variable
@@ -8,16 +9,4 @@ include "classes/render.php";
     This is a helpful way to remember why there's no $ preceding the property/method
 */
 
-$recipe1 = new Recipe('my first recipe');
-$recipe1->setSource('Grandpa Kwok');
-$recipe1->addIngredient("egg", 1);
-$recipe1->addIngredient("flour", 2, "cup");
-$recipe1->addInstruction("This is my first instruction");
-$recipe1->addTag('Breakfast');
-$recipe1->addTag('Main Course');
-
-$recipe2 = new Recipe('my second recipe');
-$recipe2->setSource('Gordon Ramsay');
-
-echo $recipe1;
-echo new Render();
+echo Render::displayRecipe($belgian_waffles);
