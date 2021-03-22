@@ -1,5 +1,6 @@
 <?php
 include "classes/recipes.php";
+include "classes/render.php";
 /* Notes:
     When you use the -> to access properties / methods in a class
     The preceding var declaration and the proceding object/method becomes on variable
@@ -16,17 +17,8 @@ $recipe1->addInstruction("This is my first instruction");
 $recipe1->addTag('Breakfast');
 $recipe1->addTag('Main Course');
 
-echo implode("\n", $recipe->getInstructions());
-echo implode(", ", $recipe1->getTags());
-
-
 $recipe2 = new Recipe();
 $recipe2->addInstruction("This is my second instruction");
-
-$recipe1->setTitle('my second recipe');
 $recipe2->setSource('Gordon Ramsay');
 
-echo $recipe1->getTitle();
-foreach ($recipe->getIngredients() as $ing) {
-    echo "\n" . $ing["amount"] . " " . $ing["measure"] . " " . $ing["item"];
-}
+echo Render::displayRecipe($recipe1);

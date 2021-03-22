@@ -105,10 +105,4 @@ class Recipe
     {
         return $this->source;
     }
-
-    public function displayRecipe()
-    {
-        // $this is the same way you'd use the object name outside of the class
-        $this->title . " by " . $this->source;
-    }
 }
