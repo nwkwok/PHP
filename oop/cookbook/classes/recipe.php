@@ -5,17 +5,25 @@ Access modifiers:
 Public	- Publicly accessible from anywhere, even from outside the scope of the class.
 Private	- Accessed within the class itself. It protects properties and methods from being access from outside the class.
 Protected - Same as private, except by allowing child (sub) classes to access protected parent (super) properties and methods.
+
+Consistency with getters and setters
+    Although you don't have to use getters and setters for all properties,
+    If you decide to do it for one property, it's best to do it for all. 
+    Just because there isn't something that we want to do with the incoming data now,
+    it doesn't mean that we won't in the future - so best to make it modular now.
+
+
 */
 
 
 class Recipe
 {
     private $title;
-    public $ingredients = array();
-    public $instructions = array();
-    public $yield;
-    public $tag = array();
-    public $source = 'Nick Kwok';
+    private $ingredients = array();
+    private $instructions = array();
+    private $yield;
+    private $tag = array();
+    private $source = 'Nick Kwok';
     private $measurements = array(
         "tsp",
         "tbsp",
@@ -56,6 +64,46 @@ class Recipe
     public function getIngredients()
     {
         return $this->ingredients;
+    }
+
+    public function addInstruction($string)
+    {
+        $this->instructions[] = $string;
+    }
+
+    public function getInstructions()
+    {
+        return $this->instructions;
+    }
+
+    public function addTag($tag)
+    {
+        $this->tags[] = strtolower($tag);
+    }
+
+    public function getTags()
+    {
+        return $this->tag;
+    }
+
+    public function setYield($yield)
+    {
+        $this->yield = $yield;
+    }
+
+    public function getYeild()
+    {
+        return $this->yield;
+    }
+
+    public function setSource($source)
+    {
+        $this->source = ucwords($source);
+    }
+
+    public function getSource()
+    {
+        return $this->source;
     }
 
     public function displayRecipe()

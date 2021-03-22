@@ -8,14 +8,23 @@ include "classes/recipes.php";
 */
 
 $recipe1 = new Recipe();
-$recipe1->source = 'Grandpa Kwok';
+$recipe1->setSource('Grandpa Kwok');
 $recipe1->setTitle('my first recipe');
-$recipe->addIngredient("egg", 1);
-$recipe->addIngredient("flour", 2, "cup");
+$recipe1->addIngredient("egg", 1);
+$recipe1->addIngredient("flour", 2, "cup");
+$recipe1->addInstruction("This is my first instruction");
+$recipe1->addTag('Breakfast');
+$recipe1->addTag('Main Course');
+
+echo implode("\n", $recipe->getInstructions());
+echo implode(", ", $recipe1->getTags());
+
 
 $recipe2 = new Recipe();
+$recipe2->addInstruction("This is my second instruction");
+
 $recipe1->setTitle('my second recipe');
-$recipe2->source = 'Gordon Ramsay';
+$recipe2->setSource('Gordon Ramsay');
 
 echo $recipe1->getTitle();
 foreach ($recipe->getIngredients() as $ing) {
