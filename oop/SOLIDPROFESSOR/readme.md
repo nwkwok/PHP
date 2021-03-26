@@ -4,9 +4,9 @@
 
 ## Areas of Growth:
 ### Work on OOP concepts
-*Abstract Classes
-*Interfaces
-*Traits
+*Abstract Classes <br />
+*Interfaces <br />
+*Traits <br />
 
 ## Type Declaration
 ### How to incorporate in OOP and Testing 
