@@ -11,8 +11,8 @@ Each subdirectory holds notes, personal thoughts and practice scripts to get exe
 *Traits <br />
 
 ## Type Declaration
-### How to incorporate in OOP and Testing 
+*How to incorporate in OOP and Testing 
 
 ## Laravel
-### Understanding the behind the scenes with Service Providers and Facades
+*Understanding the behind the scenes with Service Providers and Facades
 
