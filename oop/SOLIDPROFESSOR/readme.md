@@ -1,5 +1,5 @@
 ## SOLIDPROFESSOR Learning
-This repo holds subdirectories for for key concepts that I am inspired to grow in and master from my SOLIDPROFESSOR interview. 
+This repo holds subdirectories for key concepts that came up during my interview with SOLIDPROFESSOR. I am inspired to grow and gain high level competency around these areas.
 <br />
 <br />
 Each subdirectory holds notes, personal thoughts and practice scripts to get exercise around these topics. 
