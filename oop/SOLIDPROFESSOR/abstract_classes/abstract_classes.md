@@ -12,3 +12,5 @@ Another rule with abstract classes is if we declare a function as abstract:
 2. It means that whatever class is extending from this abstract class MUST incorporate that abstract function into the class.
 
 We do this in order to make sure that methods get named properly and, if certain methods depend on a certain method, we can make a rule that something must be included. 
+
+It sounds like at the end of the day, you're able to do similar things with interfaces as you are with abstract classes. So maybe it comes down to design choice of how you go about the implementation? 
