@@ -1,8 +1,8 @@
 # Service Providers
 
 ## TODOs:
-Friday - Read Laravel Docs and take notes
-Sunday - Utilize Service Providers in a Laravel App
+*Friday - Read Laravel Docs and take notes <br />
+*Sunday - Utilize Service Providers in a Laravel App
 
 ### What are service providers?
 Service Providers are the central place for all Laravel application bootstrapping. Your own application, as well as all of Laravel's core services are boostrapped via service providers. 
@@ -45,9 +45,5 @@ Register = bind things into the service container.
 
 ### What is a Service Container?
 Service Containers are powerful tools for managing class dependencies or performing dependency injection. 
+*Taking a detour on depedency injection :)*
 <strong>(See dependency_injection.md for notes on this)</strong>
-
-
-
-
-
