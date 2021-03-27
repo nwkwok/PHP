@@ -44,6 +44,6 @@ Register = bind things into the service container.
 <strong>You should never attempt to register any event listeners, routes or any other pieces of functionality within the reigster method.</strong>
 
 ### What is a Service Container?
-Service Containers are powerful tools for managing class dependencies or performing dependency injection. 
-*Taking a detour on depedency injection :)*
+Service Containers are powerful tools for managing class dependencies or performing dependency injection. <br />
+*Taking a detour on depedency injection :)*<br />
 <strong>(See dependency_injection.md for notes on this)</strong>
