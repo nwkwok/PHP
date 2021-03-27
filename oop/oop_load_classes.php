@@ -45,3 +45,5 @@ Above defining the class.
 Now when you instantiate any object that is inside of your classes directory, you can do 
 
 $newObj = new Namespace\Class();
+
+*/

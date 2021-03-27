@@ -1,4 +1,13 @@
 <?php
+
+// SELECT 
+// FROM 
+// JOIN 
+// ON
+// WHERE 
+// GROUP BY 
+// HAVING 
+
 require('config/config.php');
 require('config/db.php');
 
