@@ -23,6 +23,3 @@ This method tells the service container that we are registering a singleton (whi
 Lastly, we added this service provider to the config/app.php.
 
 To practice dependency injection, we created a Facade that returns a string of the singleton that we binded to the service container. We added this Facade to the aliases and then in our controller, we added injected the Fasacde into the constructor of our PageController.
-
-
-
