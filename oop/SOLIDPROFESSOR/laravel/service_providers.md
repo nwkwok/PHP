@@ -7,7 +7,13 @@
 ### What are service providers?
 Service Providers are the central place for all Laravel application bootstrapping. Your own application, as well as all of Laravel's core services are boostrapped via service providers. 
 
-### Laravel Framework Service Providers
+Service Providers are the classes where we register our binding to the service container. 
+
+Service Providers are responsible for bootstrapping all of the framework's various components, such as the database, queue, validation and routing components. 
+
+Service providers are truly the key to bootstrapping a Laravel application. The application instance is created, the service providers are registered, and the request is handed to the bootstrapped application. It's really that simple!
+
+### Laravel Framework Service Providers Out of the Box
 app.php holds all of the service providers: 
 
 Illuminate\Auth\AuthServiceProvider::class,
@@ -33,17 +39,11 @@ Illuminate\Translation\TranslationServiceProvider::class,
 Illuminate\Validation\ValidationServiceProvider::class,
 Illuminate\View\ViewServiceProvider::class,
 
-### What is an individual Service Provider?
-All service providers extend the:
-Illuminate\Support\ServiceProvider class
-<strong>See ServiceProvder.php to look at this class in this repo</strong> 
+In every service container, you will find a boot and register method
 
-<strong>Most</strong> service providers contain a 'register' and a 'boot' method. 
+### Boot()
+Actions that assume a built up Laravel
 
-Register = bind things into the service container.
-<strong>You should never attempt to register any event listeners, routes or any other pieces of functionality within the reigster method.</strong>
+### Register()
+You use the register method to register things into the Service Container.
 
-### What is a Service Container?
-Service Containers are powerful tools for managing class dependencies or performing dependency injection. <br />
-*Taking a detour on depedency injection :)*<br />
-<strong>(See dependency_injection.md for notes on this)</strong>
