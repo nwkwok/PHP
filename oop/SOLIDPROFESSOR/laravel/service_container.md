@@ -1,6 +1,6 @@
 ### What is a Service Container?
 Service Containers are powerful tools for managing class dependencies or performing dependency injection. <br />
-<strong>(See Container.php to see Laravel's Container Class)</strong> <br />
+<strong>(See Container.php to see Laravel's Container Class and dependey_injection.php)</strong> <br />
 
 Quite a long class with properties and methods that helps us manage our dependencies. The service container helps us manage our dependencies by:
 

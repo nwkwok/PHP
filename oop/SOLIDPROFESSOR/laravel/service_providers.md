@@ -47,3 +47,5 @@ Actions that assume a built up Laravel
 ### Register()
 You use the register method to register things into the Service Container.
 
+### AppServiceProvider
+This is a great place to add your application's own bootstrapping and service container bindings.
