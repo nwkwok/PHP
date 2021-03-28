@@ -7,7 +7,6 @@ Quite a long class with properties and methods that helps us manage our dependen
 1. Dependency Injection and Auto-Resolving Through the Service Container 
 When Laravel creates a controller, it will look at the dependencies 
 that are needed and using PHPs built in 'Reflection' + the Service Container it automatically creates the instance of the dependencies needed.
-
 Say that you have a Class that has a dependency and let's say that dependency also has another dependency. Laravel is smart enough to know that it needs to initialize a class for a dependency if, for some reason, that hasn't been created yet. 
 
 2. You can create your own way to auto resolve by binding in information for the instances you want Laravel to create. Laravel gives a cnetral place to sore instantiation information (ServiceProviders)
