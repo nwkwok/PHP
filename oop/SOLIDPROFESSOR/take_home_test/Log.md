@@ -52,7 +52,7 @@
 
     # Thinking Through Features
 
-    ## Return a list of all the dinstct makes the dealership has:
+    ## Return a list of all the distinct makes the dealership has:
     So, I need the ability to return a list of distinct makes a dealership has 
     I imagine this would look like a vehicle table
 
