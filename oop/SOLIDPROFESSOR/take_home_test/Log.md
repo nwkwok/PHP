@@ -1,4 +1,21 @@
-// Thinking about the problem:
+# How I Used My Time:
+
+    # Initial commit was at 8:56 PM 
+        Step 1
+            8:56 PM - 9:35
+                - Create potential class hierarchy and document which design pattern I chose in log and in class files
+                - Layout thought process and plan 
+        Step 2
+            9:35 PM - 10:41 PM
+                - Instantiate Laravel App
+                - Skim Laravel Eloquent Docs
+                - Create Models, Controllers and Routes to handle features
+        Step 3
+            10:41 PM - 10:56 PM 
+                - Document process
+
+
+# Step 1 - Thought process and plan
 
 1. Design the classes to get a better idea of what potential models could be. 
     - In the spirit of continuing to practice my OOP, I wanted to think through what would be a the best class hierarchy given the prompt.
@@ -52,6 +69,8 @@
     | vin | vehicle_id | in_stock | date_in_stock | date_sold|
     ---------------------------------------------------------
 
+# Step 2 - Build
+
 3. Incorporate this into Laravel
     - I think this is how I would want to do it:
         (I think Luke mentioned not to worry about actually creating the tables / migrations)
@@ -65,4 +84,32 @@
 
     Let's see how it goes? :) 
 
+# Step 3 - Document
+    - I pretty much stuck to my plan that I laid out in step 3:
+        *Assuming that the migrations were created and the relationships were established between the tables in the migration*
+        1. Created a Vehicle Model and an Inventory Model
+            - Used Eloquent to establish a one to many relationship between Vehicle Model and Inventory Model
+        2. Create a Vehicle Controller and an Inventory Controller
+
+            - The Vehicle Controller handled the first two queries:
+
+                Query #1
+                - Return a list of all the distinct makes the dealership has.
+                    For this I made a route for /vehicle/make
+
+                Query #2
+                - Return a list of all the distinct models the dealership has by vehicle type.  
+                Allow filtering by a specific vehicle type.
+                    For this I made a route for /vehicle/model/{type}
+                        This would allow the user to type in 'car', 'truck', or 'motorcycle' and query 
+                        uses 'type' as a matching condition with a WHERE clause
+
+                Query #3
+                - Return a list of all the individual physical vehicles that the dealership has in stock 
+                (VIN + any other details you think are relevant about the vehicle).
+                    For this I made a route for /inventory and a method called inStock
+                        This method would return the query result from joining the inventory table and the vehicles table
+                        returning the vehicles that are in stock
+                        This returned the make, model, type, zero-sixty breaking, doors, color, head light quality, VIN, 
+                        in_stock and date_in_stock.
 
