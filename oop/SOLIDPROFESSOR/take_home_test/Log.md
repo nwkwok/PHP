@@ -48,9 +48,9 @@
     Maybe here I create an inventory table that corresponds relates to vehicle by the id
                         
                         inventory table
-    _________________________________________________________________
-    | vin | vehicle_id | in_stock | date_in_stock | date_sold | doors
-    -----------------------------------------------------------------
+    _________________________________________________________
+    | vin | vehicle_id | in_stock | date_in_stock | date_sold|
+    ---------------------------------------------------------
 
 3. Incorporate this into Laravel
     - I think this is how I would want to do it:
