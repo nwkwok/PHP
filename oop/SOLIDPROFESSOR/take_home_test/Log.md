@@ -14,16 +14,21 @@
             10:41 PM - 10:56 PM 
                 - Document process
 
+# Shortcut To Seeing Laravel Implementation:
+    Created two Models in App/Models
+    Created routes in web.php
+    Created (empty) view called cars
+    Created two Controllers in App/Http/Controllers
 
 # Step 1 - Thought process and plan
 
 1. Design the classes to get a better idea of what potential models could be. 
     - In the spirit of continuing to practice my OOP, I wanted to think through what would be a the best class hierarchy given the prompt.
 
-    # Issue number one: What design will cater to motorcycle not having doors where cars and trucks do?
+    ## Issue number one: What design will cater to motorcycle not having doors where cars and trucks do?
     Cars, Trucks and Motorcycles all share the properties that the customers care about except for number of doors (which motorcycles don't have). When I ran into this, I thought about two options:
 
-    # Option 1: Vehicle Abstract Class
+    #### Option 1: Vehicle Abstract Class
     One idea could be to have a vehicle abstract class that holds 3 properties:
     - headlight_quality
     - paint_color
@@ -31,10 +36,10 @@
 
     I would omit the number of doors property from this since this is only shared between cars and trucks and I could create that property when creating my car / truck class.
 
-    # Option 2: Create VehicleWithDoors abstract class and VehicleWithoutDoors abstract class
+    #### Option 2: Create VehicleWithDoors abstract class and VehicleWithoutDoors abstract class
     - I'm not entirely sure why, but in some ways it bothers me that I would create an abstract class that caters to motorcycles instead of cars and trucks that are two classes that share something in common. Instead of creating a vehicle class and adding the doors property to cars and trucks, maybe I could have two abstract classes: VehicleWithDoors and VehicleWithoutDoors. Maybe in the future there will be other types of vehicles that are classified as vehicles that will not have doors? 
 
-    # I went with Option 1 because...
+    #### I went with Option 1 because...
     I decided to go with option #1 because I don't know how often a car dealership will be getting vehicles with no doors other than motorcycles and I also realized that there are lots of two door cars or four door cars, so having that property for cars and trucks makes more sense. It would be weird to have the motorcycle class because it doesn't have any properties / methods to add from the abstract class, but maybe this will make it easier for the company in the future to create motorcycle objects since it's waiting to be built upon. 
 
 2. Think about how to build out features based off what the customers need and what will make the car dealership's system more effective.
@@ -71,7 +76,7 @@
 
 # Step 2 - Build
 
-3. Incorporate this into Laravel
+1. Incorporate this into Laravel
     - I think this is how I would want to do it:
         (I think Luke mentioned not to worry about actually creating the tables / migrations)
         (Let's assume that the migrations are made and in the migrations, we've made the one to many relationship between vehicle and inventory)
